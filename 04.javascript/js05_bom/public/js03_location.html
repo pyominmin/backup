@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* location 객체
+	   
+	   웹브라우저의 주소표시줄과 관련된 객체이다. 이 객체는 프로토콜의 종류,
+	   호스트이름, 문서의 위치등의 정보를 제공하는 객체이다.
+	   
+	   1. 사용방법
+	   
+	      location = 'http://www.google.com';
+		  location.href = 'http://www.google.com'; => 주로 사용하는 방법
+		  location.assign('http://www.google.com');
+		  location.replace('http://www.google.com')
+		  
+	   2. 메서드
+	      a. assing(link주소)  : 현재위치에서 link주소의 위치로 이동
+	      b. reload()          : 새로고침
+	      c. replace(link주소) : 뒤로가기 버튼을 사용할 수 없다.
+	      
+	   3. 속성
+	   	  a. href : url주소
+	   	  b. host : 호스트이름과 포트번호
+	   	  c. hostname : localhost, www.google.com
+	   	  d. port : port번호
+	   	  e. pathname : 디렉토리경로
+	   	  f. hash : 앵커이름(#~~)
+	   	  g. search : 요청된 질의매개변수 ?id=hong&pw=12345...
+	   	  h. protocol : 프로토콜의 종류 즉, http, ftp file... 
+	*/
+	for(let key in location) {
+		document.write(`${key} = ${location[key]}<br>`);
+	}	
+	location.href = 'http://www.google.com?xxx=ddd';
+</script>
+</head>
+<body>
+
+</body>
+</html>

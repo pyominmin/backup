@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Insert title here</title>
+	<style>
+		body {
+			/* 기본배경이미지 */
+			background: url("./images/bg0.jpg") no-repeat fixed;
+			background-size: cover
+		}
+		
+		@media screen and (max-width: 1024px){
+			body {
+				/* 디바이스의 가로크기가 1024px 이하일 경우 */
+				background: url("./images/bg1.jpg") no-repeat fixed;
+				background-size: cover				
+			}
+		}
+		@media screen and (max-width: 768px) { 
+			body {
+				/* 디바이스의 가로크기가 768px 이하일 경우 */
+				background: url("./images/bg2.jpg") no-repeat fixed;
+				background-size: cover				
+			}		
+		}
+		@media screen and (max-width: 320px) { 
+			body {
+				background: url("./images/bg3.jpg") no-repeat fixed;
+				background-size: cover				
+				/* 디바이스의 가로크기가 320px 이하일 경우 */
+			}
+		}
+	</style>
+</head>
+<body>
+
+</body>
+</html>

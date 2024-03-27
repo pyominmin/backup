@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* input태그의 type이 checkbox or radio 속성이 check가 되었는지 여부를 선택 */
+	
+	input[type="checkbox"]:checked + div {
+		height: 0px; 
+	}
+	
+	div {
+		overflow: hidden;
+		width: 650px;
+		height: 300px;
+		-ms-trainsition-duration: 3s; /* ms계열 브라우저일 경우 1초동안 */
+		-webkit-trainsition-duration: 1s; /* 크롬 브라우저일 경우 1초동안 */
+		-moz-trainsition-duration: 1s; /* mozila계열(FF) 브라우저일 경우 1초동안 */
+		trainsition-duration: 1s; /* 상기이외ㅇ 브라우저일 경우 1초동안 */
+	}
+</style>
+</head>
+<body>
+	<input type="checkbox" />
+	<div>
+		<p>
+			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+		</p>
+	</div>
+</body>
+</html>

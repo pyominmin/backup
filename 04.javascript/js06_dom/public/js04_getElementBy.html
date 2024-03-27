@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*  */
+	window.onload = () => {
+		// 1. getElementById
+		let header1 = document.getElementById('header-1');
+		let header2 = document.getElementById('header-2');
+		
+		header1.innerHTML = "getElementById('header-1')";
+		header2.innerHTML = "getElementById('header-2')";
+		
+	}
+	
+	window.onload = () => {
+		// 2. getElementsByTagName
+		let headers = document.getElementsByTagName('h1');
+		headers[0].innerHTML = "getElementsByTagName-1";
+		headers[1].innerHTML = "getElementsByTagName-2";
+		headers[2].innerHTML = "getElementsByTagName-3";
+		
+		
+		
+		
+	}
+	
+	window.onload = () => {
+		// 3. getElementsByName
+		let headers = document.getElementsByName('aaa');
+		for(let i in headers) {
+			headers[i].innerHTML = "getElementsByName('aaa') - " + i;
+		}
+	}
+	
+	window.onload = () => {
+		// 4. getElementsByClassName
+		let headers = document.getElementsByClassName('yyy');
+		for(let i in headers) {
+			headers[i].innerHTML = "getElementsByClassName('yyy') - " + i;
+		}		
+	}
+</script>
+</head>
+<body>
+	<!-- h1#header-$[name="aaa"].xxx{header-$}*3 -->
+	<h1 id="header-1" name="aaa" class="yyy">header-1</h1>
+	<h1 id="header-2" name="aaa" class="xxx">header-2</h1>
+	<h1 id="header-3" name="ccc" class="yyy">header-3</h1>
+</body>
+</html>

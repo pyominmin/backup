@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// extend: 객체확장
+	$(() => {
+		let obj = {};
+		obj.name = '홍길동';
+		obj.age = 1000;
+		obj.addr = '조선한양';
+		
+		let obj1 = {}
+		$.extend(obj1, {name:'홍길순', age:999, hobby:'음악감상'});
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>

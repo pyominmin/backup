@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 1. forEach : for문과 array : 배열.forEach(call back함수)
+	let arr1 = ['손흥민','이강인','김민재','황희찬','황인범','박지성']
+	console.log(`배열의 크기 = ${arr1.length}`);
+	
+	for(let i=0;i<arr1.length;i++) {
+		document.write(`${i} = ${arr1[i]}<br>`);
+	}
+	document.write(`<hr>`);	
+	
+	// call back함수 - 익명함수
+	arr1.forEach(function(n) {
+		document.write(`${n}<br>`);		
+	})
+	document.write(`<hr>`);	
+
+	// call back함수 - arrow function ; java에서의 lambda함수와 동일
+	// arr1.forEach((name) => {document.write(`${name}<br>`)});
+	arr1.forEach(name => document.write(`${name}<br>`));
+	document.write(`<hr>`);	
+	
+	// 2. for..of : array(iterable)
+	let arr2 = ['키위','바나나','사과','포도','배'];
+	for(let fruit of arr2) {
+		document.write(`${fruit}<br>`);	
+	}
+	document.write(`<hr>`);	
+	
+	let str = 'JavaScript';
+	for(let x of str) {
+		document.write(`${x}<br>`);			
+	}
+	document.write(`<hr>`);	
+	
+	// 3. for..in : object
+	let hong = {
+		name: '홍길동',
+		age: 1000,
+		addr: '조선한양',
+		tel: '010-9999-8888'
+	}
+	document.write(hong.name);
+	document.write(hong['tel']);
+	document.write(`<hr>`);	
+	
+	// object
+	for(key in hong) {
+		document.write(`${key} = ${hong[key]}<br>`);		
+	}
+	document.write(`<hr>`);	
+
+	// array : index가 출력
+	for(let idx in arr2) {
+		document.write(`${idx} = ${arr2[idx]}<br>`);	
+	}
+</script>
+</head>
+<body>
+	<script>
+		/* 실습1. 웹브라저를 새로고침을 하면 랜덤하게 배경색 변하는 함수
+			   Math.random()
+			   Math.floor()
+			   
+			   function my_random(num) {
+					Math.함수
+			   }
+		
+		       function changeBackground() {
+		    	   배경색을 새로고침하는 로직
+		       }
+		*/
+		
+		changeBackground();
+	</script>
+	<script>
+		/* 실습2. 단을 입력받아서 해당 구구단 body에 출력하기(단순 for문) 
+		   실습3. 구구단을 세로로 body에 출력하기(중첩 for문)  
+				2 x 1 = 2
+				...
+				9 x 9 = 81
+		   실습4. 구구단을 가로로 body에 출력하기(중첩 for문)
+				
+				2 x 1 = 2  3 x 1 = 3   ..........         9 x 1 = 9
+				....
+				2 x 9 = 18 ..............                 9 x 9 = 81   
+				
+			실습5. 좌석배치도
+			   ... 현재 강의실의 인원수와 한줄 3명씩 앉을 경우 자리배치도를 출력해보기
+			       if, fro(중첩for), table태그를 이용
+				   member = 23, col = 3
+				   
+		*/
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

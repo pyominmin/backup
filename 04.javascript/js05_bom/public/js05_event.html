@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* event? 
+	   
+	   사용자가 어떤 특정의 행위(click, keydown...)를 하거나 특정의 객체가
+	   메모리에 로딩이 되는등의 일련의 사건을 event라고 한다. 
+	   일반적으로 onXxxx(onClick, onKeydown...)라는 접두어가 붙은 메서드를 
+	   이벤트라고 한다.
+	   
+	   window.onload 이벤트는 window객체가 로드가 완료가 되면 자동을 실행되는
+	   함수를 의미한다. 즉, html페이지에 존재하는 모든 태그가 메모리에 로딩이 
+	   완료되는 직후에 onload에 정의된 함수 or 실행문을 실행하라는 의미이다.
+	*/
+	// window.onload(function() {})
+	window.onload = () => alert('1st process');
+
+</script>
+</head>
+<body>
+	<h1>2nd Process</h1>
+	<script>alert('2nd process');</script>
+	<h1>3rd Process</h1>
+	<script>alert('3rd process');</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// 위치선택자 : 요소:odd, 요소:even, 요소:first, 요소:last
+	// 함수선택자 : 요소:eq(n), 요소:gtn(n), 요소:nth-child(2n+1);
+	$(() => {
+		$('tr:odd').css('background', 'orange');
+		$('tr:even').css('background', 'lightgray');
+		$('tr:eq(0)').css('background', 'black').css('color', 'white');
+		$('tr:nth-child(3n)').css('background', 'green').css('color', 'white');
+		$('tr:nth-child(3n+1)').css('background', 'purple').css('color', 'white');
+	})
+</script>
+</head>
+<body>
+	<table border="1">
+		<colgroup>
+			<col style="width: 100px"/>
+			<col style="width: 50px"/>
+			<col style="width: 50px"/>
+			<col style="width: 200px"/>
+		</colgroup>
+		<tr>
+			<th>이름</th>
+			<th>성별</th>
+			<th>나이</th>
+			<th>주소</th>
+		</tr>
+		<tr>
+			<td>손흥민</td>
+			<td>남</td>
+			<td>32</td>
+			<td>영국</td>
+		</tr>
+		<tr>
+			<td>손흥민</td>
+			<td>남</td>
+			<td>32</td>
+			<td>영국</td>
+		</tr>
+		<tr>
+			<td>손흥민</td>
+			<td>남</td>
+			<td>32</td>
+			<td>영국</td>
+		</tr>
+		<tr>
+			<td>손흥민</td>
+			<td>남</td>
+			<td>32</td>
+			<td>영국</td>
+		</tr>
+		<tr>
+			<td>손흥민</td>
+			<td>남</td>
+			<td>32</td>
+			<td>영국</td>
+		</tr>
+		<tr>
+			<td>손흥민</td>
+			<td>남</td>
+			<td>32</td>
+			<td>영국</td>
+		</tr>
+		<tr>
+			<td>손흥민</td>
+			<td>남</td>
+			<td>32</td>
+			<td>영국</td>
+		</tr>
+	</table>
+</body>
+</html>

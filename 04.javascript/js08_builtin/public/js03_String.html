@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+		String객체를 생성하는 방법은 literal로 정의하는 방법과 new String()
+	    즉, 생성자함수를 이용하는 방법이 있다.
+	*/
+	
+	// 1. 생성방법
+	let str1 = "Hello JavaScript!!";
+	let str2 = new String("Hello JavaScript!!");
+	
+	// 2. 속성과 메서드
+	document.write(`<h3>${str1}</h3>`);
+	document.write(`1. 문자열의 길이 = ${str1.length} <br>`);
+	document.write(`2. str1[0] = ${str1[0]} <br>`);
+	document.write(`3. charAt[6] = ${str1.charAt(6)} <br>`);
+	document.write(`4. str1.concat(str2) = ${str1.concat(str2)} <br>`);
+	document.write(`5. str1.indexOf('J') = ${str1.indexOf('J')} <br>`);
+	document.write(`6. str1.indexOf('W') = ${str1.indexOf('W')} <br>`);
+	document.write(`7. str1.indexOf('a', 6) = ${str1.indexOf('a', 6)} <br>`);
+	document.write(`8. str1.lastIndexOf('a') = ${str1.lastIndexOf('a')} <br>`);
+	document.write(`9. str1.replace('a', 'x') = ${str1.replace('a', 'x')} <br>`);
+	document.write(`${str1} <br>`);
+	str1 = str1.replace('a', 'x');
+	document.write(`${str1} <br>`);
+	
+	// indexOf와 search메서드 
+	// 차이점은 
+	// 1. indexOf는 정규식을 허용하지 않는다.
+	// 2. 검색결과가 없다면 indexOf와 search는 -1을 리턴
+	// 3. indexOf는 검색위치를 인자로 사용할 수 있지만 search는 검색위치 사용불가
+	document.write(`10. str1.search('lx') = ${str1.search('lx')} <br>`);
+	document.write(`11. str1.slice(1, 5) = ${str1.slice(1, 5)} <br>`); // start, end-1
+	
+	let str3 = "홍길동,홍길순,홍길상,손힁민,이강인";
+	let arr3 = str3.split(',');  // 쉼표를 기준으로 문자열을 분리후에 array로 저장
+	document.write(`12. str3.split(',') = ${arr3.length} : `); 
+	for(let n in arr3) {
+		document.write(`${arr3[n]}/`)
+	}
+	document.write(`<br>`);
+	
+	document.write(`13. str1.substr(1, 3) = ${str1.substr(1, 3)} <br>`); 
+	document.write(`14. str1.substring(1, 5) = ${str1.substring(1, 5)} <br>`);
+	document.write(`15. str1.substring(1) = ${str1.substring(1)} <br>`);
+	
+	document.write(`16. str1.toLowerCase() = ${str1.toLowerCase()} <br>`);
+	document.write(`17. str1.toUpperCase() = ${str1.toUpperCase()} <br>`);
+	document.write(`<hr>`);
+	
+	// 메서드체이닝 : 문자열 -> 소문자 > 0~10개의 문자를 자르기 > 'name' 문자열연결
+	let output = 'Hello JavaScript!!';
+	output = output.toLocaleLowerCase();
+	output = output.substring(0,10);
+	output = output.concat(' name');
+	document.write(`메서드별 호출 = ${output} <br>`);
+	
+	output = 'Hello JavaScript!!';
+	document.write(`메서드 체이닝 = ${output.toLocaleLowerCase().substring(0,10).concat(' name')} <br>`);	
+</script>
+</head>
+<body>
+
+</body>
+</html>

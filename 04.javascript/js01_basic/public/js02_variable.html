@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 한줄 주석
+	/* 여러줄 주석 */
+	/*  
+		A. JavaScript을 정의하는 방법
+		
+		1. inline 방식  : 요소안에 정의하는 방법
+		2. internal 방식: html파일 안에 정의하는 방법
+		3. external 방식: 외부 파일로 정의하는 방법
+		
+		B. JavaScript의 기본문법
+		
+		1. 실행문장 끝에 세미클론(;)으로 닫아 줘야 한다.
+		2. 변수의 선언방법
+           1) var, let, const로 선언한다.
+              a. var   a = 10; -> 제한없이 변수를 재선언 및 값을 변경할 수 있다.
+              b. let   b = 10; -> 선언된 변수는 재선언(타입변경)할 수 없지만 값을 변경할 수 있다.
+              c. const c = 10; -> 선언된 변수는 재선언과 값의 변경이 불가하다.
+           2) 변수선언방법 : 통상적인 표준선언방법을 준수한다.
+              a. 스타일가이드규칙에 의거 작성하는 것이 관례이다.
+              b. 구글 자바스크립트 스타일 가이드 : google.github.io/styleguide/jsguide.html
+        	  c. 에어비앤비 자바스크립트 스타일 가이드 : github.com/airbnb/javascript
+           3) 문자열은 작은/큰 따옴표 구분없이 사용한다.
+           4) 문자열은 빽틱(`) 사용하여 문자열을 간단하게 선언할 수 있다.
+           5) 변수명은 대소문자 구분한다.
+           6) 이스케이프문자 사용(\n, \t, \', \")
+              
+	*/
+	// alert("1. 안녕하세요? 반갑습니다!");
+              
+</script>
+<script>
+	a = '홍길동';
+	var a = '손흥민'
+	let b = '이강인';
+	const c = '김민재';
+	
+	// alert("제 이름은 " + a + "입니다!");
+	console.log(a, b, c);
+	
+	// 백틱
+	console.log(`${a}, ${b}, ${c}`);
+	console.log(`제 이름은 ${a} 입니다!`);
+</script>
+</head>
+<body>
+	<button onclick="javascript:alert('3. 안녕하세요? 반갑습니다!')">경고창을 표시합니다!!</button><br>
+	<button onclick="alert('3. 안녕하세요? 반갑습니다!')">경고창을 표시합니다!!</button><br>
+	<button onmouseover="alert('4. 제 이름은 홍길동 입니다!')">마우스를 올려 보세요!!</button><br>
+	<hr />
+	
+	<h1>제 이름은 ${name} 입니다!</h1>
+	<h3>제 나이는 ${age}세 입니다!</h3>
+	
+	<h1 id="name"></h1>
+	<h3 id="age"></h3>
+	
+	<!-- <script src="./js/js01.js"></script> -->
+	<script>
+		let name;
+		name = prompt("이름을 입력하세요!!", "홍길동");
+		let age = prompt("나이를 입력하세요!!", 18);
+		
+		console.log(`제 이름은 ${name} 입니다!`);
+		console.log(`제 나이는 ${age} 입니다!`);
+		
+		document.write(`<h1>제 이름은 ${name} 입니다!</h1>`)
+		document.write(`<h3>제 이름은 ${age} 입니다!</h3>`)
+		
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Table Tag</h1>
+	<!--  
+		1. table : 최상위
+		2. thead/tbody/footer : sementic tag
+		3. th : 제목행
+		4. tr : 행
+		5. td : 열
+	-->
+	
+	<!-- table>(tr>th*2)+(tr>td*2)*3 -->
+	<table border="2">
+		<tr>
+			<th>글번호</th>
+			<th>글제목</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>경제란 무엇인가?</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>인공지능의 미래는?</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>머신러닝공부방법은?</td>
+		</tr>
+	</table>
+	<hr />
+	
+	<!-- emmet 속성정의 : [] -->
+	<!-- table[border="1"] -->
+	<!-- table[border="1"]>(thead>tr>th*2)+(tbody>(tr>td*2)*3) -->	
+	<table border="1">
+		<thead>
+			<tr>
+				<th>글번호</th>
+				<th>글제목</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>1111111111111111</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>2222222222222222222</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>33333333333333333333333333333333</td>
+			</tr>
+		</tbody>
+	</table>
+	<hr />
+	
+	<h1>실습. 수업시간표만들기</h1>
+	<!--  
+		교시  월 화 수 목 금 토 일
+		1교시 수학 과학 ......
+		....
+		8교시 .....
+		
+		실습문제제출 : D:\lec\00.share\01.실습문제\02.html\01.table\홍길동
+	-->
+	<table border="1">
+		<thead>
+			<tr>
+				<th>교시</th>
+				<th>월</th>
+				<th>화</th>
+				<th>수</th>
+				<th>목</th>
+				<th>금</th>
+				<th>토</th>
+				<th>일</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1교시</td>
+				<td rowspan="3">수학</td>
+				<td>과학</td>
+				<td>도덕</td>
+				<td>미술</td>
+				<td>체육</td>
+				<td>수학</td>
+				<td>과학</td>
+			</tr>
+			<tr>
+				<td>2교시</td>
+			
+				<td>과학</td>
+				<td>국어</td>
+				<td>영어</td>
+				<td>체육</td>
+				<td>수학</td>
+				<td>과학</td>
+			</tr>
+			<tr>
+				<td>3교시</td>
+			
+				<td>과학</td>
+				<td>국어</td>
+				<td>영어</td>
+				<td>체육</td>
+				<td>수학</td>
+				<td>과학</td>
+			</tr>
+			<tr>
+				<td>4교시</td>
+				<td>영어</td>
+				<td>국어</td>
+				<td>국어</td>
+				<td>영어</td>
+				<td>음악</td>
+				<td>영어</td>
+				<td>국어</td>
+			</tr>
+			<tr>
+				<td>5교시</td>
+				<td>영어</td>
+				<td>국어</td>
+				<td>미술</td>
+				<td>음악</td>
+				<td>음악</td>
+				<td>영어</td>
+				<td>국어</td>
+			</tr>
+			<tr>
+				<td>6교시</td>
+				<td>영어</td>
+				<td>국어</td>
+				<td>미술</td>
+				<td>음악</td>
+				<td>수학</td>
+				<td>영어</td>
+				<td>영어</td>
+			</tr>
+			<tr>
+				<td>7교시</td>
+				<td colspan="7" rowspan="2">자습</td>
+			</tr>
+			<tr>
+				<td>8교시</td>
+			</tr>
+		</tbody>
+	</table>	
+</body>
+</html>

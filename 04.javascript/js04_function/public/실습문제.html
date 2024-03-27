@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/main.css" />
+<script>
+/*
+D:\lec\00.share\01.실습문제\04.javascript\03.star 에 제출  
+ 
+
+실습 1. 아래와 같이 별표 피라미드를 출력
+*
+**
+***
+****
+*****
+******
+*******		
+
+실습2.
+     *
+    **
+   ***
+  ****
+ *****
+공란 : &npsp, 공란감소 for
+
+실습3.
+*****
+****
+***
+**
+*	
+
+실습4.
+*****
+ ****
+  ***
+   **
+    *    
+
+실습5.   
+    *
+   ***
+  *****
+ *******
+*********	    
+
+실습 6.
+*********
+ *******
+  *****
+   ***
+    *	
+
+실습7. : 실습5,6를 한번에 실행
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+*/
+</script>
+
+</head>
+<body>
+	<p onclick="changeBackgroundColor()">여기를 클릭해보세요!!</p>
+	<script>
+
+		/* 1. 배경색 새로고치기 */
+		function randColor(n) {
+			return Math.floor(Math.random() * n); // 0~255까지의 난수 1개가 발생			
+		}
+		
+		function changeBackgroundColor() {
+			let randomColor = `rgb(${randColor(255)}, ${randColor(255)}, ${randColor(255)})`;
+			document.body.style.backgroundColor = randomColor;
+		}
+		
+		// changeBackgroundColor();
+	</script>
+</body>
+</html>

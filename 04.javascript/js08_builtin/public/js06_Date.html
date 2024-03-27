@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let date1 = new Date();
+	
+	// 1. 문자열
+	let date2 = new Date('2024 03 02');
+	let date3 = new Date('Dec 9 2024');
+	let date4 = new Date('December 25, 2024, 12:09:03');
+	
+	// 2. 숫자
+	let date5 = new Date(2024,12,26);
+	
+	document.write(date1, '<br>');
+	document.write(date2, '<br>');
+	document.write(date3, '<br>');
+	document.write(date4, '<br>');
+	document.write(date5, '<br>');
+	
+	// 3. 메서드 : getXxx, setXxx
+	let now = new Date();
+	let bef = new Date(2024, 1, 30);
+	
+	// getTime() : 1970.1.1 자정부터 현재까지의 ms를 구하는 메서드
+	document.write(now.getTime(), '<br>');
+	
+	let interval = now.getTime() - bef.getTime()
+	document.write(interval, ' ms <br>')
+	document.write(Math.floor(interval / (100*60*60*24)), ' 일 <br>')
+	
+	Date.prototype.getInterval = function(befDate) {
+		let interval;
+		
+		// 음수처리
+		if(this > befDate) {
+			interval = this.getTime() - befDate.getTime();
+		} else {
+			interval = befDate.getTime() - this.getTime();			
+		}
+		return Math.floor(interval / (100*60*60*24));
+	}
+	
+	document.write(now.getInterval(bef) + ' days <br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

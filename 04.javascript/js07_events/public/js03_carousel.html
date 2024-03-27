@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/carousel.css" />
+<script>
+	/*  */
+	window.addEventListener("contextmenu", e => {
+		e.preventDefault();
+		alert("오른 쪽 마우스는 사용할 수 없습니다!!")
+	});
+</script>
+</head>
+<body>
+	<p>좌우 화살표를 눌러보세요!!</p>
+	<div id="container">
+		<div class="arrow" id="left">&lang;</div>
+		<div class="arrow" id="right">&rang;</div>
+	</div>
+	
+	<script src="./js/carousel.js"></script>
+</body>
+</html>

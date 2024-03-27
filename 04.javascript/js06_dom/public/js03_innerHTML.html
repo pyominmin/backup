@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* TextNode : innerHTML vs innerText */
+	window.onload = () => {
+		let output = "";
+		output += "<ul>";
+		output += "  <li>HTML</li>";
+		output += "  <li>CSS</li>";
+		output += "  <li>JavaScript</li>";
+		output += "  <li>Python</li>";
+		output += "  <li>Spring Framework</li>";
+		output += "</ul>";
+		
+		document.write(output);
+		document.write(output);
+ 		document.body.innerHTML = output;
+ 		document.write('<h1>Document Object Model(1)</h1>');
+		document.body.innerHTML = '<h1>Document Object Model(2)</h1>'; 
+		
+		document.body.innerText = '<h1>Document Object Model(3)</h1>'; 
+		
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

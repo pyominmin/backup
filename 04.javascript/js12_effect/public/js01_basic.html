@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	/* jQuery Effect
+	   
+	   A. effect method
+	      
+	      show()        : 문서객체를 보이기
+	      hide()        : 문서객체를 감추기
+	      toggle()      : 문서객체를 보이기/감추기
+	      slideDown()   : 문서객체에 slide효과 보이기
+	      slideUp()     : 문서객체에 slide효과 감추기
+	      slideToggle() : slideUP, slideDown을 번갈아 적용
+	      fadeIn()      : 문서객체를 서서히 보이게 하기
+	      fadeOut()     : 문서객체를 서서이 감추기
+	      fadeToggle()  : fadeIn, fadeOut을 번갈아 적용
+	      
+	   B. effect메서드의 4가지형태
+	   
+	      1. $(선택자).method()
+	      2. $(선택자).method(speed) : slow, normal, fast, ms(숫자)
+	      3. $(선택자).method(speed, calback) : 효과가 수행되는 동안 수행할 콜백함수
+	      4. $(선택자).method(speed, easing, calback) : easing 애니메이션효과를 적용    
+	*/
+	$(() => {
+		$('button').click(() => {
+			$('#page').fadeToggle(1000, () => {
+				document.write('<h1>jQuery Effect</h1>');
+			});
+		})
+	})
+</script>
+</head>
+<body>
+	<button>jQuery Effect - Toggle</button>
+	<div id="page">
+		<h1>jQuery API</h1>
+		<p>jQuery is a fast, small, and feature-rich JavaScript library. 
+		It makes things like HTML document traversal and manipulation, 
+		event handling, animation, and Ajax much simpler with an easy-to-use API 
+		that works across a multitude of browsers. If you're new to jQuery, 
+		we recommend that you check out the jQuery Learning Center.</p>
+	</div>
+	
+</body>
+</html>

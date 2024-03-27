@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* ECMA6(ECMA2015)에 도입된 내용 : let/const, arrow function, class,
+	    template letter(백틱 ``), Symbol(기본데이터타입)...
+	*/
+	window.onload = () => {
+		// 속성을 추가하는 방법
+		// 1. 직접설정
+		let img = document.createElement('img');
+		img.src = "./images/blackpink.webp";
+		img.width = 200;
+		img.height = 150;
+		document.body.appendChild(img, '<hr>');
+		
+		// 2. setAttribute()
+		let img1 = document.createElement('img');
+		img1.setAttribute('src', "./images/blackpink.webp");
+		img1.setAttribute('width', 500);
+		img1.setAttribute('height', 300);
+		document.body.appendChild(img1);		
+	}	
+</script>
+</head>
+<body>
+
+</body>
+</html>

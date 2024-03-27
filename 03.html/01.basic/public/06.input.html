@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Input Tag</h1>
+	
+	<input type="text" readonly="readonly"/><br>
+	<form action="./03.list.html">
+		<input type="text" required="required" placeholder="이 정보는 반드시 입력해야 합니다!!"/>
+		
+		<input type="submit" value="로그인"/>
+	</form>
+	
+	<a href="./03.list.html">03.list.html</a>
+	
+	<hr />
+	
+	
+	<!-- textarea : 글상자(여러줄 여러행) -->
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<hr />
+	
+	<!-- selection : 항목을 선택하는 기능 제공 -->
+	<form action="">
+		<input type="text" required="required"/>
+		<select name="food" id="">
+			<option value="A">김밥</option>
+			<option value="B">순대</option>
+			<option value="C" selected="selected">어묵</option>
+			<option value="D">떡볶이</option>
+		</select>
+		<select name="gender" id="">
+			<option value="F">여성</option>
+			<option value="M" selected>남성</option>
+		</select>
+		<select name="" id="" size="8" multiple>
+			<optgroup label="books">
+				<option value="">HTML5</option>
+				<option value="">CSS3</option>
+				<option value="">JavaScript</option>
+			</optgroup>
+			<optgroup label="food">
+				<option value="A">김밥</option>
+				<option value="B">순대</option>
+				<option value="C">어묵</option>
+				<option value="D">떡볶이</option>				
+			</optgroup>
+		</select>
+	</form>
+	
+	<hr />
+	<form action="">
+		<fieldset>
+			<legend>로그인양식</legend>
+			<label for="user">User Id</label>
+			<input type="text" name="" id="user" /><br>
+			<label for="pw">Password</label>
+			<input type="password" name="" id="pw" /><br>
+		</fieldset>
+	</form>
+	<hr />
+	
+	<form action="">
+		<fiedlset>
+			<legend>로그인양식</legend>
+			<!-- table>(tr>td*2)*3 -->
+			<table>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" id="id" class=""></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" id="pw"></td>
+				</tr>
+				<tr>
+					<td rowspan="2" align="center"><input type="submit" value="로그인"/></td>
+				</tr>
+			</table>
+		</fiedlset>
+	</form>
+	<hr />
+	
+	<!-- input태그는 type속성에 따라 UI가 상이하다. -->
+	<form action="http://www.naver.com">
+		<input type="text" /><br>
+		<input type="button" value="확인" /><br>
+		<input type="checkbox" /><br>
+		<input type="radio" /><br>
+		<input type="color" /><br>
+		<input type="submit" value="전송"/><br>
+		<input type="file" /><br>
+		<input type="password" /><br>
+		<input type="hidden" /><br>
+		<input type="date" /><br>
+		<input type="number" /><br>
+		<input type="reset" /><br>
+		<input type="range" /><br>	
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* JavaScript에서 객체를 생성하는 방법은
+	   1. 객체리터럴 {}
+	   2. new객체생성연산자
+	   3. Object()
+	   4. Object.create
+	   
+	   보통은 객체리터럴 or 생성자함수로 객체를 생성한다.
+	   객체리터럴과 생성자함수는 기술적으로 차이는 없지만
+	   생성자함수명은 대문자로 시작하고 camel case를 준수
+	   하는 것이 관례이다. 
+	*/
+	let obj = {};
+	let date = new Date();
+	let obj1 = Object();
+	let obj2 = Object.create;
+	
+	// 1. 객체리터럴
+	let hong1 = {
+		name: '홍길동',
+		age: 1000
+	}
+	
+	let hong2 = {
+		name: '홍길순',
+		age: 900,
+		sayHello: function() {
+			console.log(`내 이름은 ${this.name}입니다!`);
+		}
+	}
+	
+	// 2. 생성자함수
+	//    1) 함수이름을 대문자로 시작, camel case를 준수
+	//    2) return문이 없다.
+	//    3) new 연산자로 객체를 생성할 수 있다.
+	// 생성자함수와 일반함수를 구분하는 방법은 return문의 유무로 구분한다.
+	function Hong(name, age) {
+		this.name = name;
+		this.age = age;
+		this.sayHello = function() {
+			console.log(`내 이름은 ${this.name}입니다!`);			
+		}
+	}
+	
+	// 일반함수
+	function hong(name, age) {
+		return null;
+	}
+	
+	let hong3 = new Hong();
+	let hong4 = new hong(); // 에러는 아니지만 일반함수는 new 연산자를 사용하지 않는다.
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

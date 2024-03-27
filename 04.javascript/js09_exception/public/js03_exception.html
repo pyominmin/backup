@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	try {
+		console.log(nothing);
+	} catch (e) {
+		document.write(e.name, '<br>');
+		document.write(e.message, '<br>');
+		document.write(e.stack, '<br>'); // 현재 호출된 주소(소스의 라인번호:컬럼)
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

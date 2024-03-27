@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* active : 클릭(활성화)된 태그를 선택 
+	   hover  : 마우스가 해당태그의 위에 있을 때
+	   focus  : 커서가 해당태그에 있을 때
+	*/
+	h1:hover {
+		color: red;
+	}
+	
+	h1:active {
+		color: blue;
+	}
+	
+	/* enabled, disabled, focus */
+	input:enabled {
+		background-color: white;
+	}
+	input:disabled {
+		background-color: orange;
+	}
+	input:focus {
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+	<h1>Action Selector</h1>
+	
+	<h2>Enabled</h2>
+	<input type="text" />
+	<h2>Disabled</h2>
+	<input type="text" name="" id="" disabled/>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 1. 단순if
+	if(5>2) {
+		console.log(`비교결과 = `, (5>2));
+	}
+	
+	// 2. if~else
+	let age = 20;
+	if(age>=18) {
+		console.log("성인입니다!")
+	}
+	
+	if(age>=18) {
+		document.write('<h3>성인입니다!</h3>')
+	} else {
+		document.write('<h3>성인이 아닙니다!</h3>')
+	}
+	
+	let time = 13;	
+    // 3. 중첩if
+    if(time <= 12) {
+		document.write('<h3>오전 입니다!</h3>')
+		if(time<=9) {
+			document.write('<h3>출근을 준비합니다!</h3>')			
+		} else {
+			document.write('<h3>출근을 합니다!</h3>')						
+		}
+    } else {
+    	if(time<=18) {
+			document.write('<h3>일을 합니다!</h3>')						    		
+    	} else {
+			document.write('<h3>퇴근을 합니다!</h3>')						    		
+    		
+    	}
+    }
+    
+    // 3. if~else if~else
+    time = 20;
+    if(time<=9) {
+		document.write('<h3>오전 입니다!</h3>')    	
+    } else if(time<=12) {
+		document.write('<h3>출근준비를 합니다!</h3>')    	    	
+    } else if(time<=18) {
+		document.write('<h3>일을 합니다!</h3>')    	    	    	
+    } else {
+		document.write('<h3>퇴근을 합니다!</h3>')    	    	    	
+    }
+</script>
+</head>
+<body>
+
+</body>
+</html>

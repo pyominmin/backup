@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*  
+	   내장함수 vs 사용자함수
+	   1) 내장함수 : JavaScript에 기본을 제공해주는 함수들... alert, prompt.... -> 내부 소스코드 확인 불가
+	   2) 사용자정의함수 : 개발자가 작성해서 사용 또는 제공하는 함수
+	      1) 익명함수 : 이름이 없는 함수 function() {}, 변수에 저장해서 사용할 수 있다.
+	      2) 선언함수(일반함수...) : 이름이 있는 함수 function 함수명() {}, 함수명()으로 호출해서 사용가능
+	      3) 화살표함수: 람다식으로 선언된 함수 () -> {}, 통상적으로 콜백함수형태등으로 많이 사용된다.	
+	*/
+	// 1. 익명함수
+	let fn01 = function() {
+	    	  // 실행문장들...
+	    	  return '반환될 값';
+	      }
+	 document.write(`<h3>${fn01()}</h3>`);
+	 let result = fn01();
+	 
+	 let fn02 = function(a, b) {
+		 return a * b;
+	 }
+	 result = fn02(10, 10);
+	 document.write(`<h3>${result}</h3>`);
+	 document.write(`<h3>${fn02(20,20)}</h3>`);
+	 
+	 // 2. 선언함수
+	 function fn03(w, x, b) {
+		 return w*x + b;
+	 }
+	 document.write(`<h3>${fn03(10,5,3)}</h3>`);
+	 
+	 
+	 // 3. 화살표함수
+	 let arr = ['javascript', 'pyhton', 'java', 'R', 'Groovy'];
+	 console.log(arr.map(m => m.length));
+	 
+</script>
+</head>
+<body>
+	<hr />
+	<input type="text" id="fnum" value="20"/>&nbsp&nbsp
+	<input type="text" id="snum" value="10"/>
+	<hr />
+	<script>
+		function add() {
+			let fnum = parseInt(document.getElementById('fnum').value);
+			let snum = parseInt(document.querySelector('#snum').value);
+			document.getElementById('result').innerHTML = fnum + snum;
+		}
+		function sub() {
+			let fnum = parseInt(document.getElementById('fnum').value);
+			let snum = parseInt(document.querySelector('#snum').value);
+			document.getElementById('result').innerHTML = fnum - snum;	
+		}
+		function mul() {
+			let fnum = parseInt(document.getElementById('fnum').value);
+			let snum = parseInt(document.querySelector('#snum').value);
+			document.getElementById('result').innerHTML = fnum * snum;	
+		}
+		function div() {
+			let fnum = parseInt(document.getElementById('fnum').value);
+			let snum = parseInt(document.querySelector('#snum').value);
+			document.getElementById('result').innerHTML = fnum / snum;			
+		}
+		
+	</script>
+	<input type="button" value="+" onclick="add()"/>&nbsp&nbsp
+	<input type="button" value="-" onclick="sub()"/>&nbsp&nbsp
+	<input type="button" value="*" onclick="mul()"/>&nbsp&nbsp
+	<input type="button" value="/" onclick="div()"/>&nbsp&nbsp
+	<hr />
+	result = <h3 id="result"></h3>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

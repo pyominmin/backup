@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// 실습. h1을 선택해서 홀수요소의 배경색을 green, 글자색을 white로 설정하기
+	// filter(위치선택자).css()....
+	$(() => {
+/* 		$('h3').filter(':odd')
+		       .css('background', 'green')
+		       .css('color', 'white'); 
+		$('h3').filter(':odd')
+		       .css({background: 'blue'})
+		       .css({color: 'white'}); */
+		       
+		$('h3').filter(':odd').css({background: 'yellow', color: 'balck'});
+		$('h3').filter(':even').css({background: 'green', color: 'white'});
+		
+		$('h3').filter(idx => idx % 3 === 0).css({background: 'purple', color: 'white'});
+		
+	})
+</script>
+</head>
+<body>
+	<h3>header-1</h3>
+	<h3>header-2</h3>
+	<h3>header-3</h3>
+	<h3>header-4</h3>
+	<h3>header-5</h3>
+	<h3>header-6</h3>
+</body>
+</html>

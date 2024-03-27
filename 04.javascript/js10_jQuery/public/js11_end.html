@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// end() : 이전단계로 되돌아가가
+	// 메서드체인과 end메서드를 이용해서 전단계로 돌아가서
+	// 임의의 작업을 수행할 수 있게 한다.
+	$(() => {
+		$('h3').css({background: 'orange'})
+		       .filter(':even').css({color: 'red'})
+		       .end()
+		       .filter(':odd').css({color: 'green'})		       
+	})
+</script>
+</head>
+<body>
+	<h3>header-1</h3>
+	<h3>header-2</h3>
+	<h3>header-3</h3>
+	<h3>header-4</h3>
+	<h3>header-5</h3>
+	<h3>header-6</h3>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/ui-lightness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	h1 {
+		text-align: center;
+	}
+	
+	#button {
+		margin: 10px;
+		padding: 10px;
+		text-align: center;
+		
+	}
+</style>
+<script>
+	$(() => {
+		$('#button')
+			.hover(
+				function() { $(this).addClass('ui-state-hover')},
+				function() { $(this).removeClass('ui-state-hover')},
+			);
+		
+		$('#button').click(function() {
+			$(this).toggleClass('ui-state-active');
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="button" class="box ui-state-default ui-coner-all">
+		<p>Tooltips can be attached to any element. When you hover the element with your mouse, 
+		the title attribute is displayed in a little box next to the element, just like a native 
+		tooltip.</p>
+	</div>
+	
+	<button id="button" class="box ui-state-default ui-corner-all">Button</button>
+</body>
+</html>

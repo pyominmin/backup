@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*  */
+	
+	// 1. querySelector - 객체
+	window.onload = () => {
+	      let header1 = document.querySelector('#header-1');
+	      let header2 = document.querySelector('#header-2');
+
+	      header1.innerHTML = 'querySelector 메서드 1';
+	      header2.innerHTML = 'querySelector 메서드 2';
+	}
+	
+	// 2. querySelectorAll - 배열형태
+	window.onload = () => {
+		let headers = document.querySelectorAll('h1');
+		for(let i in headers) {
+			headers[i].innerHTML = 'querySelectorAll - ' + i;
+		}
+	} 
+	
+	// 3. 동적으로 객체를 변경하기
+	// header-3를 선택해서 style을 적용하기
+	// header3.style.속성(border, color, background-color)
+	// border : 2px solid, blue; color: red; backgroud-color: orange
+ 	window.onload = () => {
+		let header3 = document.querySelector('#header-3');
+		header3.style.border = '2px solid red';
+		header3.style.color = 'blue';
+		header3.style.backgroundColor = 'orange'; 
+	}
+	
+	// 4. 문서객체를 삭제하기
+	// 실습. removeChild()메서드를 header-4인 객체를 삭제해보기
+	window.onload = () => {
+		let header4 = document.querySelector('#header-4');
+		document.body.removeChild(header4);
+	} 
+</script>
+</head>
+<body>
+	<!-- h1#header-${Header}*4 -->
+	<h1 id="header-1"
+		style="border:2px solid red; color:white; background-color: mediumseagreen;"
+	>Header</h1>
+	<h1 id="header-2">Header</h1>
+	<h1 id="header-3">Header</h1>
+	<h1 id="header-4">Header</h1>
+</body>
+</html>

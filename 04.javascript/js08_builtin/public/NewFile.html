@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// sort : 객체의 정렬
+	function Student(name, kor, eng, mat) {
+	  this.name = name;
+	  this.kor = kor;
+	  this.eng = eng;
+	  this.mat = mat;	
+}
+	
+	Student.prototype.getSum = function() { return this.kor + this.eng + this.mat}
+	Student.prototype.getAvg = () => this.getSum / 3;
+	Student.prototype.toString = function(){
+	    return `이름=${this.name},국어=${this.kor},영어=${this.eng},수학${this.mat}`
+	 }
+
+	let students = [];
+	students.push(new Student('홍길동', 10,10,10))
+	students.push(new Student('손흥민', 20,10,10))
+	students.push(new Student('이강인', 30,10,10))
+	
+	// 1. 이름순
+	students.sort((a, b) => a.name < b.name ? -1 : (a.name > b.name ? 1 : 0)); 
+/* 	 if(a.name<b.name) {
+		 return -1;
+	 }
+	 if(a.name>b.name) {
+		 return 1;
+	 }
+	 return 0; */
+	
+	for(let i in students) {
+	  document.write(students[i].toString(), '<br>')
+	}
+	document.write('<hr>')
+</script>
+</head>
+<body>
+
+</body>
+</html>

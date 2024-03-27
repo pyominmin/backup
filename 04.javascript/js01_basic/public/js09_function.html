@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 함수(function) 
+	   
+	   함수는 함수표현식으로 선언할 수 있는데 이러한 함수를 익명함수라고 한다.
+	   즉 let fn = function() {...} 형태로 선언되는 함수를 말한다.
+	   
+	   또한, 함수는 반환값이 있는 경우가 있고 없는 경우가 있다. return문이 없는 함수를
+	   호출할 경우에는 반환값은 'undefined'를 반환한다.
+	   
+	   주의할 점은 함수를 호출할 때 스코프(범위)안에 있어야 함수를 호출할 수 있다. 만약에
+	   함수가 스코프안에 없다면 변수처럼 호이스팅이 된다.
+	*/
+	
+	// console.log(square);         // square는 초기값으로 undefined를 가지고 호이스팅이 된다.        
+	// console.log(`${square(5)}`); // TypeError에러가 발생이 된다. 이 시점에서는 square는 함수가 아니라 변수이다.
+	
+	const square = function(x) {
+		   return x * x;
+	}
+	
+	let name = prompt('이름을 입력하세요~!', '홍길동');
+	
+	// 함수는 변수로 선언해서도 사용할 수 있다.
+	let pmt = prompt;
+	let sqr = square;
+	console.log("prompt함수 = ", pmt);
+	console.log("square함수 = ", sqr);
+	
+	// JavaScript에서 변수를 사용할 떄 주의해야할 점이 있다.
+	console.log("prompt는 함수일까요? ", typeof prompt);
+	prompt = "prompt는 함수일까요? ";
+	console.log("prompt는 함수일까요? ", typeof prompt);
+	
+	// prompt('이름을 입력하세요!', '홍길동')
+	prompt = pmt;
+	console.log("prompt는 함수일까요? ", typeof prompt);
+</script>
+</head>
+<body>
+
+
+
+
+
+
+
+</body>
+</html>

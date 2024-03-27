@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* Prototype : 객체의 공통영역 
+	
+	   JavaScript은 모든 객체는 공통영역인 prototype영역이 있다.
+	   공통영역을 정의하는 방법은
+	   1. 속성  : 생성자함수.prototype.속성명 = 값
+	   2. 메서드: 생성자함수.prototype.메서드명, 대표적인 메서드가 toString()
+	*/
+	function Student(name, kor, eng, mat) {
+	  	this.name = name;
+	  	this.kor = kor;
+	  	this.eng = eng;
+	  	this.mat = mat;
+	  	this.getSum = function() { return this.kor + this.eng + this.mat }
+	  	this.getAvg = () => this.getSum() / 3;
+	}
+	
+	let hong = new Student('홍길동', 100,80,90);
+	let kim = new Student('김길동', 90,80,90);
+	console.log(`${hong.name}의 총점은 ${hong.getSum()}, 평균은 ${hong.getAvg()}입니다!`)
+	console.log(`${kim.name}의 총점은 ${kim.getSum()}, 평균은 ${kim.getAvg()}입니다!`)
+	
+	function Student1(name, kor, eng, mat) {
+	  	this.name = name;
+	  	this.kor = kor;
+	  	this.eng = eng;
+	  	this.mat = mat;
+	}	
+	Student1.prototype.school = '이젠대학교';
+	Student1.prototype.toString = function() { return `나의 이름은 ${this.name}입니다!`}
+	Student1.prototype.getSum = function() { return this.kor + this.eng + this.mat; }
+	Student1.prototype.getAvg = function() { return this.getSum() / 3 }
+	
+	let std1 = new Student1('학생1', 100,88,77);
+	let std2 = new Student1('학생2', 90,88,77);
+	console.log(`${std1.name}의 총점은 ${std1.getSum()}, 평균은 ${std1.getAvg()}입니다!`)
+	console.log(`${std2.name}의 총점은 ${std2.getSum()}, 평균은 ${std2.getAvg()}입니다!`)	
+</script>
+</head>
+<body>
+
+</body>
+</html>

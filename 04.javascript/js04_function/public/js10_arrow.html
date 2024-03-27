@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* Arrow Function */
+	// 일반함수
+	let hi = function() {
+		return '(일반함수) 안녕하세요'
+	}
+	console.log(hi());
+	
+	// 화살표함수
+	// 1. 매개변수가 없을 경우
+	hi = () => { return '(화살표함수) 1. 안녕하세요!'};
+	console.log(hi());
+	
+	hi = () => '(화살표함수) 2. 안녕하세요!';
+	console.log(hi());
+	
+	// 2. 매개변수가 1개만 있을 경우
+	let sayHello = function(name) { return name + "님 안녕하세요(1)"}
+	console.log(sayHello('홍길동'));
+	
+	sayHello = name => { return name + "님 안녕하세요(2)"}
+	console.log(sayHello('홍길순'));
+	
+	sayHello = name => name + "님 안녕하세요(3)";
+	console.log(sayHello('홍길상'));
+	
+	// 3. 매개변수가 1개이상 있을 경우
+	let 더하기 = function add(a, b) { return a + b };
+	더하기 = (a, b) => a + b;
+	console.log(더하기(10,10));
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

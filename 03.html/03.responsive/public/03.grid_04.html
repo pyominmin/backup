@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Insert title here</title>
+	<style>
+		#wrapper {
+			display: grid;
+			grid-template-columns: repeat(3, 200px); /* 너비가 200px인 컬럼이 3개 */
+			grid-template-rows: minmax(100px, auto);
+		
+			/* grid간격 : grid-gap,grid-row-gap, grid-columns-gap  */
+			
+			grid-gap: 20px 30px; /* 행간격 열간격 */
+			/*  grid-row-gap: 20px와 grid-columns-gap: 30px 동시정의   */ 
+		}
+		
+		.items {
+			padding: 15px;
+			background-color: red;
+		}
+		.items:nth-child(odd) {
+			background-color: green;
+		}		
+		
+	</style>
+</head>
+  <body>
+    <div id="wrapper">
+      <div class="items">
+        Using a grid-view is very helpful when designing web pages. It makes it
+        easier to place elements on the page.
+      </div>
+      <div class="items">
+        Using a grid-view is very helpful when designing web pages. It makes it
+        easier to place elements on the page.
+      </div>
+      <div class="items">
+        Using a grid-view is very helpful when designing web pages. It makes it
+        easier to place elements on the page.
+      </div>
+      <div class="items">
+        Using a grid-view is very helpful when designing web pages. It makes it
+        easier to place elements on the page.
+      </div>
+      <div class="items">
+        Using a grid-view is very helpful when designing web pages. It makes it
+        easier to place elements on the page.
+      </div>
+    </div>
+  </body>
+</html>

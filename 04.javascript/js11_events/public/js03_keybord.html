@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// keydown > keypress > keyup
+	$(() => {
+		$('textarea').keydown(function() {
+			// 남은 글자수 확인
+			let len = $(this).val().length;
+			let rem = 20-len;
+			console.log(`남은 글자수 = ${rem}`);
+			
+			$('h3').html(rem);
+			
+			// 남아있는 글자수가 > 0 black, 아니면 red
+			if(rem>0) {
+				$('h3').css('color', 'black')
+			} else {
+				$('h3').css('color', 'red')				
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="container">
+		<p>박효신의 야생화</p>
+		<h3>20</h3>
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+	</div>
+</body>
+</html>

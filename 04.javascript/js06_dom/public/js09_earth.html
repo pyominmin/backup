@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<canvas id="canvas" width="500" height="320" style="background: #111111"></canvas>
+</body>
+<script>
+	/*  */
+	let canvas = document.querySelector('#canvas');
+	let context = canvas.getContext('2d');
+	
+	// 태양기준 지구의 위치(각도)와 지구기준 달의 위치(각도)
+	let earthDegree = 0;
+	let moonDegree = 0;
+		
+	window.onload = () => {
+		loop();
+	}
+	
+	// 애니메이션효과
+	function loop() {
+		setInterval(update, 1000/20); // 20FPS 프레임속도
+	}
+	
+	// 이전의 그림을 지우고 다시그리기
+	function update() {
+		context.clearRect(0,0, canvas.width, canvas.height);
+		drawSun();
+		const [earthDx, earthDy] = drawEarth();
+		drawMoon(earthDx, earthDy);
+	}
+	
+	// 태양의 위치
+	function drawSun() {
+		context.beginPath();
+		
+		// canvas에 sun의 위치설정, 즉, canvas의 중간
+		let dx = canvas.width / 2;
+		let dy = canvas.height / 2;
+		let radius = 30; // 태양의 크기
+		
+		context.arc(dx, dy, radius, 0, 2 * Math.PI);
+		context.fillStyle = 'yellow';
+		context.fill();
+		context.lineWidth = 5;
+		context.strokeStyle = 'orange';		
+		context.stroke();
+	}
+	
+	// 지구의 위치
+	function drawEarth() {
+		
+		let distanceFromSun = 100;
+		
+		context.beginPath()
+		
+		// cnavas의 중간위치 + 삼각비의 길이를 곱하면 지구의 위치
+		let dx = (canvas.width / 2) + Math.cos(degToRad(earthDegree)) * distanceFromSun;
+		let dy = (canvas.height / 2) + Math.sin(degToRad(earthDegree)) * distanceFromSun;
+		
+		let radius = 10; // 지구의 크기
+		
+		context.arc(dx, dy, radius, 0, 2 * Math.PI);
+		context.fillStyle = 'lightseagreen';
+		context.fill();
+		context.lineWidth = 5;
+		context.strokeStyle = 'green';		
+		context.stroke();
+		
+		earthDegree++;
+		
+		// 달의 위치를 지구의 상대위치로 설정 지구의 위치를 리턴
+		return [dx, dy];
+	}
+	
+	// 달의 위치
+	function drawMoon(earthDx, earthDy) {
+		let distanceFromEarth = 25;
+		
+		context.beginPath()
+		let dx = earthDx + distanceFromEarth * Math.cos(degToRad(moonDegree));
+		let dy = earthDy + distanceFromEarth * Math.sin(degToRad(moonDegree));
+		
+		let radius = 3; // 달의 크기
+		
+		context.arc(dx, dy, radius, 0, 2 * Math.PI);
+		context.lineWidth = 5;
+		context.strokeStyle = 'white';		
+		context.stroke();
+		
+		// 달의 공전속도를 지구보다 빠르게 설정
+		moonDegree += 12;
+	}
+	
+	// 지구와 달의 위치(각도)
+	function degToRad(degree) {
+		return Math.PI / 180 * degree;
+	}
+</script>
+</html>

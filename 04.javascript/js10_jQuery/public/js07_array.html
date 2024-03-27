@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// JavaScript : 배열.forEach(() => {})
+	// jQuert     : $.each(object, () => {}), $(선택자).each(() => {})
+	let array = [
+		{name:'Google', link:"http://www.google.com"},
+		{name:'Amazon', link:"http://www.amazon.com"},
+		{name:'Mozilla', link:"https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array"},
+		{name:'JavaInfo', link:"http://javascript.info"},
+	];
+	
+	$.each(array, (idx, arr) => {
+		document.write(`${idx} = ${arr.name} : <a href='${arr.link}'>${arr.name}</a><br>`)
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>

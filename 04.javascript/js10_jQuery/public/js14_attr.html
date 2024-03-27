@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	$(() => {
+		// A. 속성추가 및 읽기
+		let src = $('img').attr('src'); // 전체가 아니라 첫 번째 img태그만 선택
+		let wd = $('img').attr('width');
+		// alert(typeof src, src);
+		// alert(typeof wd, wd);
+		
+		// 1. 값
+		//$('img').attr('width', 300);
+		//$('img').attr('height', 200);
+		
+		// 2. function
+		$('img').attr('width', idx => (idx+1)*100);
+		
+		// 3. {}
+		$('img').attr({
+			// width: 200,
+			// height: 100
+			width: i => (i+1) * 100,
+			height: i => (i+2) * 100,
+		})
+		
+		// B. 속성삭제
+		$('h1').removeAttr('data-index');
+	})
+</script>
+</head>
+<body>
+	<img src="./images/bp01.jpg" alt="blackpink01.jpg" />
+	<img src="./images/bp02.jpg" alt="blackpink02.jpg" />
+	<img src="./images/bp03.jpg" alt="blackpink03.jpg" />
+	
+	<h3 data-index="1">header-1</h3>
+	<h3 data-index="2">header-2</h3>
+	<h3 data-index="3">header-3</h3>
+</body>
+</html>

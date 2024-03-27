@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/ui-lightness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+	$(() => {
+		let contents = [
+			"홍길동",
+			"백두산",
+			"한라산",
+			"손흥민",
+			"김민재",
+			"황희찬"
+		];
+		
+		$('#contents').autocomplete({
+			source: contents
+		});
+	})
+</script>
+</head>
+<body>
+	<div class="ui-widget">
+		<label for="contents">Contents...</label>
+		<input type="text" id="contents"/>
+	</div>
+</body>
+</html>

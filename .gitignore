@@ -1,0 +1,8 @@
+.metadata/
+.settings/
+bin/
+.classpath
+.project
+/.ipynb_checkpoints
+/.idea
+/__pycache__

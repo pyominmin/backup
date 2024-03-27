@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 
+	   A. 선택자
+	   1. ::first-letter : 문장에서 첫 번째 글자를 선택
+	   2. ::first-line   : 문장에서 첫 번째 라인을 선택
+	   3. ::selection    : 블럭단위로 문자열을 선택
+	   
+	   B. 글자관련태그속성
+	   1. font-style : bold, italic...
+	   2. font-weight : 글자굵기
+	   3. font-family : 글꼴이름
+	   4. font-size   : 글꼴크기
+	   5. text-align  : start, end, left, right, center, justify, match-parent
+	   6. line-height : 줄간격
+	   7. text-decoration : 텍스트꾸미기, none, underline, overline(위에 라인), line-through(취소선)
+	   8. text-shadow : 그림자적용 none, [가로, 세로, 번짐, 색상]
+	   9. text-transform : none / capitalize / uppercase / lowercase / full-width(가능한 모든 문자를 전각문자)
+	  10. letter-spacing(문자간의 간격), word-spacing(단어간격) 
+	   
+	   
+	   C. 웹폰트 : 웹에서 다운로드한 폰트를 사용
+	   1. https://fonts.google.com
+	      --> link항목에 있는 소스를 복사 & 글꼴이름을 기억
+	      --> style블럭에 적용하던지 link태그로 정의하면 된다.
+	   
+	*/
+	
+	 p::first-letter {
+	 	font-size: 3em; /* 크기단위 px, %, em, rem, pt */
+	 }
+	 p::first-line {
+	 	color: red;
+	 }
+	 p::selection {
+	 	background: black;
+	 	color: white;
+	 	font-style: italic;
+	 	font-weight: bold;
+	 }
+	
+	.heading {
+		width: 100%;
+		height: 100px;
+		background: #222;
+		color: rgb(255,255,255);
+		text-align: center;
+		line-height: 200%;
+	}
+	
+	.deco {
+		text-decoration: underline;
+	}
+	
+	.shadow1 {
+		text-shadow: 1px 1px black; /* 가로, 세로, 색상 */
+	}
+	.shadow2 {
+		text-shadow: 5px 5px 3px blue; /* 가로, 세로, 번짐정도, 색상 */
+	}
+	.shadow3 {
+		text-shadow: 10px -10px 20px green; /* 가로, 세로, 번짐정도, 색상 */
+	}
+	.trans1 { text-transform: capitalize;}
+	.trans2 { text-transform: uppercase; }
+	.trans3 { text-transform: lowercase; }
+	
+	.space1 { letter-spacing: 0.2em; }
+	.space2 { letter-spacing: 0.5em; }
+	.space3 { letter-spacing: 1.5em; }
+	
+</style>
+</head>
+<body>
+
+	<h1 class="space1">CSS</h1>
+	<h1 class="space2">CSS</h1>
+	<h1 class="space3">CSS</h1>
+
+	<h1>제목....</h1>
+	<p>
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.	
+	</p>
+	<p class="heading">
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.	
+	</p>
+	
+	<h1 class="deco">제목......</h1>
+	<h1 class="shadow1">HTML5</h1>
+	<h1 class="shadow2">CSS3</h1>
+	<h1 class="shadow3">JavaScript</h1>
+	
+	<h1 class="trans1">html5</h1>
+	<h1 class="trans2">css3</h1>
+	<h1 class="trans3">JAVASCRIPT</h1>
+	
+</body>
+</html>

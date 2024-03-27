@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#box {
+	border: 1px solid black;
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+}
+
+#result {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	color: red;
+}
+</style>
+
+</head>
+<body>
+	<div id="box"></div>
+	<hr />
+	
+	<h3>아무런 key를 눌러보세요!!</h3>
+	<div id="result"></div>
+<script>
+	/*  
+		1. 마우스 이벤트에서 클릭위치 알아 내기
+		   ... event.pageX, event.pageY : 마우스의 x,y 위치
+		
+		2. key관련이벤트가 발생했을 때
+		   ... event.code, event.key : 키보드와 관련된 값 
+	*/
+
+	const box = document.querySelector('#box');
+	box.addEventListener('click', (e) => {
+		alert(`이벤트발생위치 : (${e.pageX}, ${e.pageY})`);
+		for(let k in e) {
+			console.log(`${k} = ${e[k]}<br>`);
+		}
+	});
+
+	const body = document.body;
+	const result = document.querySelector('#result');
+	
+	body.addEventListener("keydown", e => {
+		result.innerText = `code : ${e.code} / key : ${e.key}`;	
+		for(let k in e) {
+			console.log(`${k} = ${e[k]}<br>`);
+		}		
+	})
+</script>	
+</body>
+</html>

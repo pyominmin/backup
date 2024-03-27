@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* #header의 후손(공란) h1 문자색을 red  
+	   #header의 자손(>) h1 문자색을 bulue
+	*/
+	#header h1 {
+		color: red;
+	}
+	
+	#header > h1 {
+		color: blue;
+	}
+	
+	/* 실습.
+		table태그의 tr 아래의 th태그의 문자색을 red로 지정하기
+	*/
+	table tr th {
+		color: red;
+	}
+	
+	table > tr > th {
+		color: blue;
+	}	
+</style>
+</head>
+<body>
+	<!-- div#header>h1.title{제목....} -->
+	<div id="header">
+		<h1 class="title">제목....</h1>
+		
+		<div id="nav">
+			<h1>Navigation</h1>
+		</div>
+		
+		<!-- div#section>h1.title{제목...}+p{} -->
+		<div id="section">
+			<h1 class="title">제목...</h1>
+			<p>
+			  "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+			</p>
+		</div>
+	</div>
+	<hr />
+	
+	<table border="1">
+		<tr>
+			<th>이름</th>
+			<th>주민번호</th>
+		</tr>
+		
+		<tr>
+			<td>홍길동</td>
+			<td>123456-1234567</td>
+		</tr>
+	</table>
+	
+</body>
+</html>

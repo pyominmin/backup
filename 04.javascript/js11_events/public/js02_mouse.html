@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// mousedown, mouseup
+	$(() => {
+		let canvas = document.querySelector('#canvas');
+		let context = canvas.getContext('2d');
+		
+		$('canvas').on({
+			mousedown: function(e) {
+				let position = $(this).offset(); // mouse의 x,y좌표
+				let x = e.pageX - position.left;
+				let y = e.pageY - position.top;
+				
+				// 선그리기
+				context.beginPath();
+				context.moveTo(x, y);
+			},
+			mouseup: function(e) {
+				let position = $(this).offset(); // mouse의 x,y좌표
+				let x = e.pageX - position.left;
+				let y = e.pageY - position.top;
+				
+				context.lineTo(x, y);
+				context.stroke();
+			},
+		})
+	})
+</script>
+</head>
+<body>
+	<canvas id="canvas" width="700" height="400" style="border: 3px solid black;"></canvas>
+</body>
+</html>

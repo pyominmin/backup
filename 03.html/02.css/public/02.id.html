@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    /* https://developer.mozilla.org/ko/docs/MDN/Community/Contributing/Getting_started */
+	/* id 선택자 
+	   실습.
+	   
+	   1. id가 header 태그의 스타일 : width를 800, 배경색을 red
+	   2. id가 wrap인 태그의 스타일 : width를 800
+	   3. id가 aside인 태그의 스타일: width를 200, 배경색을 blue
+	   4. id가 content인 태그의 스타일 : width를 600 배경색을 green
+	*/
+	
+	#header {
+		width: 800;
+		background-color: red;
+		margin: 10px 50px 100px 150px; /* border를 기준으로 바깥 여백 상우하좌 순서*/
+	}
+	
+	#wrap {
+		width: 800px;
+		/* overflow : 주어진 공간보다 많은 영역을 차지하는 컨텐츠를 어떻게 보여줄 것인가를 정의 하는 속성 
+		   1. visible : 경계선으로 밖으로 넘어서 보여주는 속성
+		   2. hidden  : 넘치는 부분을 감추는 속성		   
+		*/
+		overflow: hidden;
+	}
+	
+	#aside {
+	    width: 200px;
+	    background: blue;
+	    float: left;
+	}
+	
+	#content {
+		width: 600px;
+		background-color: green;
+	    float: left;
+	}
+	
+</style>
+</head>
+<body>
+	<!-- div#header>h1{Header} -->
+	<div id="header">
+		<h1>Header</h1>
+	</div>
+	
+	<!-- div#wrap>div#aside>h1{Aside} -->
+	<div id="wrap">
+		<div id="aside">
+			<h1>Aside</h1>
+		</div>
+	
+		<!-- div#content>h1{Content} -->
+		<div id="content">
+			<h1>Content</h1>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 임의로 예외가 발생할 수 있는 함수
+	function getMonthName(m) {
+		m = m - 1; // 인덱스 0부터
+		let months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+		if(months[m]) {
+			return months[m];
+		} else {
+			throw `${m+1}월의 값은 1~12까지 입니다!`
+		}
+	}
+	
+	let month = 9999;
+	try {
+		monthName = getMonthName(month);
+		console.log(`입력한 달은 ${monthName} 입니다!!`)
+	} catch (e) {
+		monthName = 'unknown';
+		console.log(e);
+	} finally {
+		console.log("프로그램강제종료!!!")
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

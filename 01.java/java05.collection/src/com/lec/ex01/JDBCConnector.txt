@@ -1,0 +1,6 @@
+DRV=org.mariadb.jdbc.Driver
+URL=jdbc:mariadb://localhost:3307/employees
+USR=root
+PWD=12345
+NAME=홍길동
+# 한글처리

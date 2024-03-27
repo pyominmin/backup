@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/clock.css" />
+</head>
+<body>
+	<div class="clock">
+		<div id="clock">15:10:10</div>
+		<div id="date">2024.02.27 화요일</div>
+	</div>
+	
+	<script>
+		/* 실습. digital clock 만들기 */
+		function clock() {
+			let date = new Date();
+			let YYYY = date.getFullYear();
+			let MM = zeroFill(date.getMonth() + 1);
+			let DD = zeroFill(date.getDate());
+			let hh = zeroFill(date.getHours());
+			let mm = zeroFill(date.getMinutes());
+			let ss = zeroFill(date.getSeconds());
+			let week = weekDay();
+			// console.log(YYYY, MM, DD, hh, mm, ss, weekDay());	
+			
+			// 앞에 0을 채워주는 함수
+			function zeroFill(num) {
+				return num < 10 ? '0'+num : num;
+			}
+			
+			// 요일을 리턴하는 함수
+			function weekDay() {
+				let week = ['일','월','화','수','목','금','토'];
+				return week[date.getDay()];
+			}
+			
+			// 출력함수
+			function writeClock(YYYY, MM, DD, hh, mm, ss, week) {
+				let clock = document.querySelector('#clock');
+				let date = document.querySelector('#date');
+				clock.innerText = `${hh}:${mm}:${ss}`;
+				date.innerText = YYYY + "." + MM + "." + DD + ` ${week}요일`;
+			}
+			
+			writeClock(YYYY, MM, DD, hh, mm, ss, week);
+		}
+		
+		setInterval(clock, 1000);
+	</script>	
+</body>
+</html>

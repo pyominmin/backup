@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#box {
+	background: mediumseagreen;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+</style>	
+<script>
+	/*  
+		jQuery Animation
+		
+		A. method
+		
+		   1. $().animation(object)
+		   2. $().animation(object, speed)
+		   3. $().animation(object, speed, easing)
+		   4. $().animation(object, speed, easing, callback)
+		
+		B. animation 형태
+		
+		   opacity, height, width, top, left, margin, padding
+		   
+		C. stop method
+		   
+		   1. $().stop();
+	       2. $().stop(clearQueue);
+	       3. $().stop(clearQueue, goToEnd)
+	*/
+	$(() => {
+		$('button').click(() => {
+			$('div').animate({
+				left: "+=250px",
+				opacity: "0.2",
+				height: "+=150px",
+				width: "+=150px",
+				left: "toggle",
+				height: "toggle",
+				width: "toggle",
+			})
+		});
+		
+		// animation효과는 누적처리가 가능
+		$('#box').click(function() {
+			$(this).animate({height: "300px", opacity: "0.5"}, "slow");
+			$(this).animate({width: "300px", opacity: "0.5"}, "fase");
+			$(this).animate({height: "100px", opacity: "0.5"}, "slow");
+			$(this).animate({width: "100px", opacity: "0.5"}, "fast");
+		});
+	})
+</script>
+</head>
+<body>
+	<button>Start Animation</button><br>
+	<div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<style>
+	h1.item {color: red;}
+	h1.selected {color: blue;}
+</style>
+<script>
+	// 문서객체에 속성을 추가/삭제
+	$(() => {
+		$('h1').removeClass('item');
+		$('h1').addClass('selected');
+	})
+</script>
+</head>
+<body>
+	<h1 class="item">header-1</h1>
+	<h1 class="item">header-2</h1>
+	<h1 class="item">header-3</h1>
+</body>
+</html>

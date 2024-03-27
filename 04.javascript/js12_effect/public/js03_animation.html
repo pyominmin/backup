@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<style>
+	div {
+		background: mediumseagreen;
+		height: 100px;
+		width: 100px;
+		position: relative;
+	}
+</style>
+<script>
+	// 실습. $('div'), hover(fn, fn), animate()
+	$(() => {
+		$('div').hover(
+					function() { $(this).animate({left:500, top:500}), 'slow'},
+					function() { $(this).animate({left:0, top:0}), 'slow'}
+				)
+	})
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

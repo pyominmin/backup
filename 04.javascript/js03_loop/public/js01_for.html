@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let sum = 0;
+	for(i=1;i<=10;i++) {
+		sum += i;
+	}
+	document.write(`<h3>1~10까지의 합은 ${sum}입니다!</h3><hr>`)
+
+	sum = 0;
+	for(i=1;i<=10;i=i+100) {
+		sum += i;
+	}
+	document.write(`<h3>1~10까지의 합은 ${sum}입니다!</h3><hr>`)
+
+	sum = 0;
+	for(let i=1000;i<=10;i=i+100) {
+		sum += i;
+	}
+	document.write(`<h3>1~10까지의 합은 ${sum}입니다!</h3><hr>`)
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let num = 12;
+	if(num%2 == 0) {
+		document.write('<h3>짝수입니다!</h3>')
+	} else {
+		document.write('<h3>홀수입니다!</h3>')		
+	} 
+	
+	switch(num %= 2) {
+	case 0:
+		document.write('<h3>짝수입니다!</h3>')
+		break;
+	case 1:
+		document.write('<h3>홀수입니다!</h3>')
+		break;
+	default:
+		document.write('<h3>숫자가 아닙니다!</h3>')		
+	}
+	
+	switch(browser) {
+	case 'Edge':
+		console.log("현재 사용중이 웹브라우저는 Edge입니다!");
+		break;
+	case 'Chrome':
+	case 'Firefox':
+	case 'Safari':
+	case 'Opera':
+		console.log("현재 사용중이 웹브라우저는 서비스가 가능한 웹브라우저 입니다!");		
+		break;
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

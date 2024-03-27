@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	$(function() {
+		$('h1').css('color', 'blue');          // document.querySelector('h1')
+		$('h1#target').css('color', 'yellow'); // document.querySelector('h1#target')
+	})
+</script>
+<!-- <style>
+	h1 { color: red; }
+	h1#target { color: green; }
+</style> -->
+</head>
+<body>
+	<h1>오늘의 회화</h1>
+	<p>Thankfully, it's not that serious</p>
+	<p id="target">[스포티비뉴스=박대성 기자] 토마스 투헬 감독이 '별들의 전쟁' 챔피언스리그에서 김민재(26)를 빼려고 한다. 독일 유력 매체들에 따르면 에릭 다이어-마티아스 더 리흐트 수비 조합을 꺼낼 참이다. 이후 바이에른 뮌헨 감독으로 연결된 아르네 슬롯 페예노르트 감독에게 차기 감독 후보군에 관한 질문이 있었다.</p>
+	<h1 id="target">Thankfully, it's not that serious</h1>
+</body>
+</html>

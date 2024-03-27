@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*  
+		이벤트란?
+				
+		특정의 DOM객체에 사용자가 마우스 or 키보등의 조작행위가 일어 났을 경우
+		해당 객체에 발생되는 일련의 동작(사건, event)을 말한다.
+		특정 이벤트가 발생하면 그 이벤트에 맞는 동작을 하는 기능을 수행할 수 있
+		도록 하는데 일반적으로 동작을 수행하는 함수와 연결한다.
+		해당 함수는 이벤트가 발생되기 전에는 실행되고 있지 않다가 해당 이벤트가
+		발생되면 수행된다. 이 함수를 이벤트핸들러(event handler)라고 한다.
+		JavaScript에서의 이벤트는 on~ 이라는 접두사정의되는 속성을 말한다.
+		
+		A. JavaScript에서 처리하는 이벤트
+		
+		1. UI관련이벤트
+		
+		   load  : 웹페이지나 스크립트의 로딩이 완료가 되었을 때 발생
+		   unload: 웹페이지가 언로딩될 때 주로, 새로운 웹페이지가 요청되었을 때
+		   error : 브라우저가 JavaScript의 오류가 발생되었을 때, 요청된 자원이 없을 때
+		   resize: 브라우저창의 크기가 변경되었을 때
+		   scroll: 스크롤바를 움직였을 때
+		   select: 특정의 텍스트를 선택했을 때
+		   
+		2. 키보드관련이벤트
+		
+		   keydown : 키보드를 누르고 있을 때
+		   keyup   : 누르고 있던 키보드를 뗄 때
+		   keypress: 키를 누르고 뗄 때 
+			   
+		3. 마우스관련이벤트
+		
+		   click
+		   dblclick
+		   mousedown
+		   mouseup
+		   mousemove
+		   mouseover : 마우스가 DOM의 위로 움직였을 때 (터치스크린일 경우 동작하지 않는다.)
+		   mouseout  : 마우스가 DOM 밖으로 빠져 나갈 때 (터치스크린에서는 불동작)
+		   mouseenter: 마우스가 DOM에 커서 올려져 있을 때
+		   mouseleave: 마우스가 DOM에서 커서가 빠졌을 때
+				
+		4. 포커스관련이벤트
+		
+		   focus/foucusin : DOM객체에 포커스가 있을 때
+		   blur/foucusout : DOM객체에 포커스를 잃어 버렸을 때
+		
+		5. 폼관련이벤트
+		   
+		   input : input or textarea태그의 값이 변경되었을 때
+		   change: select box, checkbox, radio객체의 상태가 변경되었을 때
+		   submit: form을 submit(button or enter)
+		   reset : reset버튼을 클릭했을 때
+
+		6. 클립보드관련이벤트
+		
+		   cut   :
+		   copy  :
+		   paste :
+		
+		B. 이벤트를 설정하는 방법
+		
+		1. inline방식
+		
+		   tag의 속성으로 지정하는 방법(onclick, keypress....)
+		
+		2. property방식
+		   
+		   발생한 이벤트를 해당 객체의 이벤트속성 즉, 등록하는 방법이다.
+		   인라인 방식은 객체와 강하게 연결되어 있는 상태에 비해 HTML과 JavaScript의
+		   로직을 분리하는 방법이다. 대신에 이벤트핸들러 방식은 오직 하나의 이벤트만
+		   연결(바인딩)할 수 있다.
+		
+		3. addEventListener방식
+		
+		   addEventListener메서드를 이용하면 대상 DOM객체에 이벤트를 바인딩하고 해당
+		   이벤트가 발생했을 때 실행할 함수(콜백함수, 이벤트핸들러)를 지정한다.
+		   
+		   DOM객체.addEventListener('이벤트타입', 콜백함수 [, useCapture])형식으로 
+		   정의한다. useCapture이라는 옵션은 bubbling수행여부를 설정(기본값 false)한다.
+		   
+		   addEventListener방식은 이전방식에 비해 장점이 있다.
+		   
+		   a. 하나의 이벤트에 여러개의 이벤트핸들러를 추가할 수 있다.
+		   b. 캡쳐링과 버블링을 지원한다.
+		   c. HTML요소 뿐만 아니라 모든 DOM요소(HTML, XML, SVG...)에 대해 동작한다.
+	
+	*/
+	
+	function fn01() {
+		alert(`1. ${this.value}님 안녕하세요? 반갑습니다!`)		   
+	}
+		   
+	function fn02(name) {
+		alert(`2. ${name}님 안녕하세요? 반갑습니다!`)		   
+	}
+	
+</script>
+</head>
+<body>
+	<!-- 1. inline방식 -->
+	<h3 id="header1" onclick="alert('header1을 클릭했습니다!')">여기를 클릭하세요!!</h3>
+	<input type="button" onclick="alert('Hello??' + this.value)" value="손흥민"/>
+	<input type="button" onclick="alert('Hello??' + this.value)" value="김민재"/>
+	<input type="button" onclick="fn01(); fn02(this.value);" value="이강인"/>
+	<input type="button" id="btn" class="btn" value="류현진"/>
+	<input type="button" id="btn" class="btn" value="이정후"/>
+	<hr />
+	<input type="button" id="target" value="박지성"/>
+	
+</body>
+<script>
+	// 2. 속성에 이벤트설정
+	let btn1 = document.querySelector('#btn');
+	btn1.onclick = function() {
+		alert("1. 안녕하세요 반갑습니다!");
+	}
+	
+	let btn2 = document.querySelector('.btn');
+	btn2.onclick = function() {
+		alert("2. 안녕하세요 반갑습니다!");
+	}
+</script>
+
+<script>
+	// 3. addEventListener
+	let btn3 = document.querySelector('#target');
+	btn3.addEventListener('click', function(e) {
+		alert(`3. ${e.target.value}님 반갑습니다.`)
+	});
+	
+	btn3.addEventListener('click', e => alert(`4. ${e.target.value}님 반갑습니다.`));
+</script>
+
+</html>
+
+
+
+
+
+
+
+

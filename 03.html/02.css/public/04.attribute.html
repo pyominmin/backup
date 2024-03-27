@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 속성([])선택자
+	   1. input태그의 type속성 text인 태그의 배경색을 red
+	   2. input태그의 type속성 password인 태그의 배경색을 blue 
+	*/
+	input[type="text"] {
+		background: red;
+	}
+	input[type="password"] {
+		background-color: blue;
+	}
+	
+	/* 속성의 값을 선택 
+	   $ : 문자열의 끝에서 부터 문자열을 선택
+	   ^ : 문자열의 시작에서 부터 문자열을 선택
+	   * : 문자열중에 선언된 문자열이 포함된 모든 태그를 선택
+	*/
+	img[src="aaa.jpg"] {
+		border: 3px solid red;	
+	}	
+	
+	img[src$="png"] {
+		border: 3px solid blue;	
+	}
+	
+	img[src^="a"] {
+		border: 3px solid green;	
+	}
+	
+	img[src*="x"] {
+		border: 3px solid yellow;	
+	}
+	
+</style>
+</head>
+<body>
+	<input type="text" /><br>
+	<input type="password" />
+	<table border="1"></table>
+	<hr />
+	
+	<img src="aaa.jpg" alt="jpg 그림파일입니다!" width="200" height="100"/><br>
+	<img src="bbb.png" alt="png 그림파일입니다!" width="200" height="100"/><br>
+	<img src="ccc.gif" alt="gif 그림파일입니다!" width="200" height="100"/><br>
+	<img src="bbb.png" alt="png 그림파일입니다!" width="200" height="100"/><br>
+	<img src="abb.png" alt="png 그림파일입니다!" width="200" height="100"/><br>
+	<img src="axb.png" alt="png 그림파일입니다!" width="200" height="100"/><br>
+	<img src="abx.png" alt="png 그림파일입니다!" width="200" height="100"/><br>
+	
+	
+</body>
+</html>

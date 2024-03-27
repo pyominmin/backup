@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 전개구문 
+	   1. 값만 꺼내서 펼쳐주는 구문
+	   2. 마침표 3개(...)를 사용해서 표현한다.
+	   3. 문자열이나 배열, 객체처럼 여러 개의 값을 저장하고 있을 때
+	      값만 꺼내서 사용하려고 할 때 유용한다.
+	   4. 나머지매개변수
+	      ... 함수를 선언할 때도 사용할 수 있다.
+	      ... 함수에 전달할 매개값의 갯수가 유동적일 때 사용하는데
+	          이런 매개변수를 나머지매개변수라 한다.
+	*/
+	let fruits = ['사과', '바나나', '포도'];
+	console.log(fruits);
+	console.log(...fruits);
+	
+	function addNum(...numbers) {
+		let sum = 0;
+		for(let num of numbers) {
+			sum += num;
+		}
+		return sum;
+	}
+	console.log(addNum(1,3,5));
+	console.log(addNum(1,3,5,7,9));
+	
+	function xxx(first, second, ...remain) {
+		let str = `과일중에서 가장 좋아 하는 과일은 ${second}입니다!`;
+		return str;
+	}
+	console.log(xxx("바나나", "포도", "사과"));
+	
+	// 나머지매개변수와 일반매개변수를 혼용해서 사용할 경우에는
+	// 마지막에 나머지매개변수를 선언해야 한다. 아니면 에러 발생.
+/* 	function yyy(...remain, first) {
+		let str = `과일중에서 가장 좋아 하는 과일은 ${first}입니다!`;
+		return str;
+	}
+	console.log(yyy("바나나", "포도", "사과")); */
+</script>
+</head>
+<body>
+
+</body>
+</html>

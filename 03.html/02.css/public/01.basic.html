@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 주석 : 한줄 or 여러줄 주석처리 */
+	/* 
+		CSS 타입
+		
+		1. 외부CSS   : link태그로 외부파일로 정의된 css파일(확장자가 css)을 로딩해서 사용
+		2. 내부CSS   : style태그로 정의된 css
+		3. 인라인CSS : 태그안에 style속성에 정의된 css
+		
+		적용우선순위는 외부css < 내부css < 인라인css < !import
+		
+	*/
+	/*  
+		선택자 : body태그 포함한 body안에 정의된 태그를 선택한다.
+		1. 전체선택자   : *
+		2. 태그선택자   : h1~h6, div, table.... 즉, body태그를 포함한 모든 엘리먼트(태그)
+		3. 아이디선택자 : #아이디명 즉 태그의 id속성으로 정의된 태그를 선택 - html안에 유일한 값을 정의
+		4. 클래스선택자 : .클래스명 즉 태그의 class속성으로 정의된 태그를 선택 - html안에 복수로 정의
+		5. 속성선택자   : 태그의 속성을 선택
+		6. 자손선택자   : h1 > h2
+		7. 후손선택자   : h1 h2
+		8. 동위선택자   : h1, h2 
+		9. 위치선택자   : h1:nth
+	*/
+ 	* { 
+		color: blue;
+		background-color: green;
+	} 
+	
+	h2 {
+		background-color: mediumseagreen;
+	}
+	
+	h1, h4 {
+		background-color: aqua;
+	}
+	
+	/*  
+		CSS에서 색상정의 방법
+		
+		1. literal : red, black.... 색상으로 표현하는 예약어로 지정하는 방법
+		2. RGB(16) : #000000 or #000와 같이 색상의 16진수값으로 지정하는 방법
+	*/
+	p {
+		color: #96DE28
+	}
+</style>
+</head>
+<body>
+	<!-- html 주석 -->
+	<h1>CSS3(Cascade Style Sheet)</h1>
+	<h1 style="color: yellow; background-color: black;">CSS selector(inline)</h1>
+	<h1>Heading 1</h1>
+	
+	<h2>Heading 2</h2>
+	<h2>Heading 2</h2>
+	<h2>Heading 2</h2>
+	<h3>Heading 3</h3>
+	
+	<p>
+What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	
+	</p>
+</body>
+</html>

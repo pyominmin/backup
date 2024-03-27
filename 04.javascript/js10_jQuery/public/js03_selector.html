@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// jQuery선택자를 이용해서
+	// 1. .item인 태그의 글자색을 orange
+	// 2. h1.item인 태그의 글자색을 red로
+	// 3. h1.item.selected인 태그의 글자색을 blue
+	$(() => {
+		$('.item').css('color', 'orange');
+		$('h1.item').css('color', 'red');
+		$('h1.item.selected').css('color', 'blue');
+		$('.selected').css('color', 'green');
+	})
+</script>
+</head>
+<body>
+	<h1 class="item">header-1</h1>
+	<h1 class="item selected">header-2</h1>
+	<h1 class="item">header-3</h1>
+</body>
+</html>

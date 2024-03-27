@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// jQuery Parsing
+	// 1. jQuery.parseJSON() : JSON형식의 문자열을 JavaScript의 객체로 변환
+	// 2. jQuery.parseXML()  : XML형식의 문자열을을 XML Document Type으로 변환
+	// 3. jQuery.parseHTML() : HTML형식의 문자열을 HTML문서객체로 변환
+	// http://api.jquery.com/jQuery.parseJSON
+	// http://api.jquery.com/jQuery.parseXML
+	// http://api.jquery.com/jQuery.parseHTML
+	
+	
+	let xml = "";
+	xml += '<members>';
+	xml += '  <member>';
+	xml += '     <name>홍길동</name>';
+	xml += '     <age>1000</age>';
+	xml += '  </member>';
+	xml += '  <member>';
+	xml += '     <name>손흥민</name>';
+	xml += '     <age>32</age>';
+	xml += '  </member>';
+	xml += '  <member>';
+	xml += '     <name>김민재</name>';
+	xml += '     <age>25</age>';
+	xml += '  </member>';
+	xml += '</members>';
+	
+	$(() => {
+		// xml문자열을 XML로 변환
+		let xmlDoc = $.parseXML(xml);
+		// xml객체는 find(), each(), text()메서드를 지원
+		$(xmlDoc).find('member')
+		         .each(function(idx) {
+		        	 let output ="";
+		        	 output += '<div>';
+		        	 output += `<h3>${$(this).find('name').text()}`;
+		        	 output += ` = ${$(this).find('age').text()}</h3>`;
+		        	 output += '</div>';
+		        	 document.body.innerHTML += output;
+		         })
+		
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>

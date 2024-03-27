@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="./js/js03.js"></script>
+	<script>
+		/* 함수의 scope */
+		// 1. 선언함수
+/* 		function 함수() { document.write('<h3>1st 함수 호출!!</h3>')}
+		function 함수() { document.write('<h3>2nd 함수 호출!!</h3>')}
+		함수(); */
+		
+		// 2. 익명함수
+		// var 함수 = function() { document.write('<h3>1st 함수 호출!!</h3>')}
+		// var 함수 = function() { document.write('<h3>2nd 함수 호출!!</h3>')}
+		// 함수();		
+		
+		// 3. 익명함수 - 호이스팅
+		// 함수(); // 에러
+		// var 함수 = function() { document.write('<h3>1st 함수 호출!!</h3>')}
+		// var 함수 = function() { document.write('<h3>2nd 함수 호출!!</h3>')}
+
+		// 4. 선언함수 - 호이스팅
+		함수();
+		function 함수() { document.write('<h3>1st 함수 호출!!</h3>')}
+		function 함수() { document.write('<h3>2nd 함수 호출!!</h3>')}
+		
+		/* JavaScript의 변수 사용법
+		
+		   1. var변수보다 let, const로 선언된 변수를 사용하자
+		      ...여러 사람이 함께 진행하는 프로젝트라면 변수를 재선언할 수도 없고
+		         호이스팅도 없는 let이나 const변수를 사용하는 것이 안전하다.
+		   2. 전역변수는 최소한으로 사용하자
+		      ... 가능하면 전역변수의 사용을 줄이고 프로그램에서 값이 변하지 않는다면
+		          const로 선언하는 것이 좋다.
+		   3. 객체선언은 const로 사용하자
+		      ...객체를 선언할 때에는 프로그램 중에 객체가 바뀌지 않도록 const로 선언한다.
+		         객체안에 있는 property는 얼마든지 수정할 수 있다.
+		*/
+		const hong = {
+				name: '홍길똥'
+		}
+		hong.name = '홍길동';
+	</script>
+</body>
+</html>

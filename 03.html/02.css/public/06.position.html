@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 위치선택자  
+	   1. + : 바로 뒤에 있는 태그선택
+	   2. ~ : 뒤에 있는 모든 태그선택
+	   3. first-child : 첫 번째 태그
+	   4. last-child  : 마지막 태그
+	   5. nth-child   : 수열에 해당하는 태그선택
+	*/
+	/* h1에 바로 뒤에 있는 h2 태그를 선택 */
+	h1 + h2 {
+		color: red;
+	}
+	
+	/* h1의 뒤에 있는 모든 태그를 선택 */
+	h1 ~ h2 {
+		color: orange;
+	}
+	
+	/* div의 첫 번쨰, 마지막, n번째 후손 태그를 선택 */
+	div h3:first-child {
+		color: red;
+	}
+	div h3:last-child {	
+		color: blue;
+	}
+	div h3:nth-child(2n) {
+		color: orange;		
+	}
+	
+	
+</style>
+</head>
+<body>
+	<!-- h1{header - $}*5 -->
+	<h1>header - 1</h1>
+	<h2>header - 2</h2>
+	<h2>header - 3</h2>
+	<h2>header - 4</h2>
+	<h2>header - 5</h2>
+	<hr/>
+	
+	<div>
+		<h3>header - 1</h3>
+		<h3>header - 2</h3>
+		<h3>header - 3</h3>
+		<h3>header - 4</h3>
+		<h3>header - 5</h3>
+	</div>
+</body>
+</html>

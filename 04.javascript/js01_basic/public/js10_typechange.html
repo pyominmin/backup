@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 형변환함수
+	
+	   1. Number()
+	   2. String()
+	   3. Boolean()
+	*/
+	// 1. Number(문자열)
+	//    문자열의 조건은 숫자로 변환할 수 있는 숫자형문자열이어야 한다.
+	let age = prompt('나이를 입력하세요!!', 18);
+	console.log(typeof age);
+	console.log(`${age = age + 1}`);
+	
+	Number(age)
+	console.log(typeof age);
+	console.log(`${age = age + 1}`);
+	
+	age = Number(age)
+	console.log(typeof age);
+	console.log(`${age = age + 1}`);
+	
+	let num = '100';
+	console.log(`${Number(num) + 1}`);
+	num = '100a';
+	console.log(`${Number(num) + 1}`);
+	
+	// Number(true);
+	let 참 = true;
+	console.log(typeof 참);
+	참 = Number(참)
+	console.log(`${참}`, typeof 참);
+	console.log('---------------------------------');
+	
+	// 2. String(문자열)
+	//    number와 boolean등의 값을 문자열로 변환
+	num = 100;
+	num = String(num)
+	console.log(typeof num);
+	console.log(`${num + 1}`, typeof num);
+	
+	let a = false;
+	a = String(a)
+	console.log(typeof a);
+	console.log('---------------------------------');
+	
+	// 3. Boolean(숫자) or Boolean(문자)
+	// 1) 숫자 0은 false, 0이 아닌 모든 숫자는 true
+	let b = 0;
+	Boolean(b);
+	console.log(typeof b, ' = ', b);
+	b = Boolean(b);
+	console.log(typeof b, ' = ', b);
+	b = Boolean(-100);
+	console.log(typeof b, ' = ', b);
+	
+	// 2) 문자일 경우 값이 없으면 false, 값이 있을 경우 true
+	b = Boolean('');
+	console.log(typeof b, ' = ', b); // false
+	b = Boolean(null);
+	console.log(typeof b, ' = ', b); // false
+	b = Boolean(undefined);
+	console.log(typeof b, ' = ', b); // false
+	b = Boolean('문자열');
+	console.log(typeof b, ' = ', b); // true
+	console.log('---------------------------------');
+	
+	// 4. parseInt vs Number
+	let test1 = '0001';
+	console.log(`parseInt = ${parseInt(test1)}`);
+	console.log(`Number   = ${Number(test1)}`);
+	
+	test1 = '2024년';
+	console.log(`parseInt = ${parseInt(test1)}`); // 2024
+	console.log(`Number   = ${Number(test1)}`);   // NaN
+	
+	test1 = '년2024';
+	console.log(`parseInt = ${parseInt(test1)}`); // NaN
+	console.log(`Number   = ${Number(test1)}`);   // NaN
+	
+	// 5. parseFloat vs Number
+	test1 = '10.12345'
+	console.log(`parseInt = ${parseInt(test1)}`);     // 10
+	console.log(`parseFloat = ${parseFloat(test1)}`); // 10.12345
+	console.log(`Number   = ${Number(test1)}`);       // 10.12345	
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

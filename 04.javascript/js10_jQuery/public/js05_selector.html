@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+	crossorigin="anonymous"></script>
+<script>
+	// 속성선택자
+	$(() => {
+		$('input[type=text]').val('Hello jQuery!!!');
+		// if ($('input[type=checkbox]').is(':checked')) {};
+		$('input[type=checkbox]').prop('checked', true);
+		setInterval(() => {
+			let value = $('select > option:selected').val();
+			document.write(value + '<br>');
+		}, 3000);
+	})
+</script>
+</head>
+<body>
+	<input type="text" value="Hello???"/>
+	<input type="checkbox"/>
+	
+	<select name="" id="">
+		<option value="Apple">Apple</option>
+		<option value="Dog">Dog</option>
+		<option value="Cat">Cat</option>
+		<option value="Horse">Horse</option>
+	</select>
+</body>
+</html>
